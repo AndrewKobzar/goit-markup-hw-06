@@ -392,6 +392,11 @@ img {
   border-radius: 50%;
 }
 
+.social-network.item:hover,
+.social-network.item:focus {
+  background-color: var(--hover-text-color);
+}
+
 .social-network-link {
   width: 100%;
   height: 100%;
@@ -401,6 +406,7 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-network-link:hover .link,
 .social-network-link:focus .link {
   fill: var(--secondary-color);
 }
@@ -410,23 +416,9 @@ img {
   border-radius: 50%;
 }
 
-.social-network.item:hover,
-.social-network.item:focus {
-  background-color: var(--hover-text-color);
-}
-
-.social-network.item .link {
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-network.item:hover .link,
-.social-network.item:focus .link {
-  fill: var(--secondary-color);
-}
-
 .social-network .link {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .command {
@@ -592,12 +584,14 @@ img {
   display: flex;
   align-items: baseline;
 }
+.network {
+  margin-right: 93px;
+}
 
 .footer-network {
   display: flex;
   gap: 10px;
   margin-top: 20px;
-  margin-right: 93px;
 }
 
 .footer-network a {
@@ -666,8 +660,6 @@ img {
   display: flex;
   gap: 12px;
 }
-.mailing-link {
-}
 
 .mailing-input {
   width: 358px;
@@ -693,10 +685,19 @@ img {
   border-radius: 4px;
   border-color: transparent;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-mailing .icon {
   fill: var(--secondary-color);
+  margin-left: 10px;
 }
 /* Портфолио */
 
@@ -845,10 +846,14 @@ img {
 }
 
 /* ------modal------ */
-.backdrop p,div,label,span,input, button {
+.backdrop p,
+div,
+label,
+span,
+input,
+button {
   margin: 0;
 }
-
 
 .backdrop {
   position: fixed;
@@ -869,7 +874,7 @@ img {
   height: 581px;
   background-color: var(--secondary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-   0px 2px 1px rgba(0, 0, 0, 0.2);
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
 }
@@ -888,6 +893,14 @@ img {
   height: 30px;
   justify-content: center;
   cursor: pointer;
+  
+}
+.icon-modal{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal:hover .icon-modal {
+fill: var(--hover-text-color)
 }
 
 .is-hidden {
@@ -914,7 +927,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  padding-left: 25px;
+  padding-left: 42px;
   outline: transparent;
 }
 
@@ -938,9 +951,8 @@ img {
 }
 
 .btn-send {
-  min-width: 200x;
+  width: 200x;
   height: 50px;
-
   padding: 10px 52px;
   border-color: transparent;
   background: #2196f3;
@@ -955,6 +967,12 @@ img {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-send:hover {
+ background-color: #188CE8;
 }
 
 .modal-item {
@@ -962,15 +980,11 @@ img {
 }
 
 .modal-item .icon-mod {
-  width: 15px;
-  height: 12px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 7px;
-  transition:f 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  
+  left: 12px;
+  transition: f 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-text {
@@ -1019,7 +1033,6 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .window:focus {
   border-color: var(--hover-text-color);
 }
@@ -1027,7 +1040,6 @@ img {
 .window:focus + .icon-mod {
   fill: var(--hover-text-color);
 }
-
 
 .modal-text {
   font-size: 12px;
